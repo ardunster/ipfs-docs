@@ -14,7 +14,7 @@ If you've got just one local IPFS node that's always running, local pinning may 
 - You don't have all the disk space you need on your local node.
 - You run more than one IPFS node, and would like to use one of them as a "personal pinning service" as your preferred location for permanent storage.
 
-There are a number of commercial pinning services that make it easy for you to purchase pinning capacity for your important files, some of which include Pinata, Temporal, Infura, and others. Each of these third-party services has its own unique interface for pinning files and managing those pins; this could include a GUI, an API, CLI commands, or other tooling.
+There are a number of commercial pinning services that make it easy for you to purchase pinning capacity for your important files, some of which include Pinata, Temporal, Crust, Infura, and others. Each of these third-party services has its own unique interface for pinning files and managing those pins; this could include a GUI, an API, CLI commands, or other tooling.
 
 However, you don't need to learn new commands or tools if your pinning service of choice supports the vendor-agnostic [IPFS Pinning Service API](https://ipfs.github.io/pinning-services-api-spec/) specification. Those services are supported within IPFS itself through the command line: `ipfs pin remote --help`.
 
@@ -69,7 +69,7 @@ Command-line users benefit from `ipfs pin remote` commands, which simplify remot
 
 To add a new pinning service, use the following command:
 
-```console
+```shell
 $ ipfs pin remote service add nickname https://my-pin-service.example.com/api-endpoint myAccessToken
 ```
 
@@ -83,25 +83,25 @@ Here are a few CLI commands to get you started. In all examples, replace `nickna
 
 To pin a CID under under a human-readable name:
 
-```console
+```shell
 $ ipfs pin remote add --service=nickname --name=war-and-peace.txt bafybeib32tuqzs2wrc52rdt56cz73sqe3qu2deqdudssspnu4gbezmhig4
 ```
 
 To list successful pins:
 
-```console
+```shell
 $ ipfs pin remote ls --service=nickname
 ```
 
 To list all "pending" pins:
 
-```console
+```shell
 $ ipfs pin remote ls --service=nickname --status=queued,pinning,failed
 ```
 
 For more commands and general help:
 
-```console
+```shell
 $ ipfs pin remote --help
 ```
 

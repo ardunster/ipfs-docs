@@ -17,7 +17,7 @@ _&mdash; Brian Hoffman, CEO, OB1_
 <img src="./images/case-studies/logo-openbazaar.png" alt="OpenBazaar logo" width="120">
 :::
 
-[OpenBazaar](https://openbazaar.org/) is a peer-to-peer e-commerce platform where buyers and sellers can participate anonymously and privately without data collection by vendors or any other central authority. The OpenBazaar platform is developed by [OB1](https://ob1.io/), whose projects also include [Haven](https://gethaven.app/), a mobile version of OpenBazaar that offers shopping, chat, and the ability to send cryptocurrencies privately. (The products' codebases are similar, but due to the requirements of some mobile app stores, OB1 needed to separate the two with different brands and some code tweaks.)
+[OpenBazaar](https://openbazaar.org/) is a peer-to-peer e-commerce platform where buyers and sellers can participate anonymously and privately without data collection by vendors or any other central authority. The OpenBazaar platform is developed by [OB1](https://ob1.io/).
 
 IPFS serves as the content storage network for both OpenBazaar and Haven. On the network, merchants and buyers can each run storage nodes, eliminating the need for any central server. By using IPFS to create this collaborative network, OpenBazaar enables buyers and sellers to trade without the risks of centralized data collection or the threat of having their personal information hacked.
 
@@ -49,7 +49,7 @@ During this early phase, the OB1 team had also evaluated other open-source proje
 By having participants in the network host their own data as well as their neighbors' data via IPFS, OpenBazaar creates a truly decentralized storage network that doesn’t depend on OB1 infrastructure or on any particular hosting provider. The system is resilient &mdash; meaning there is no central server to attack or take down. Furthermore, this architecture preserves privacy because user data isn't centrally stored. One of the persistently nagging problems of e-commerce is frequent database hacks and the resulting compromise of private user data. With no central database, there simply is no such vulnerability in the OpenBazaar network.
 
 ::: callout
-**Protocol Labs is always there when we need them, but we don’t need them very often.**
+**"Protocol Labs is always there when we need them, but we don’t need them very often."**
 
 _&mdash; Brian Hoffman, CEO, OB1_
 :::

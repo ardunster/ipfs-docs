@@ -94,7 +94,7 @@ ipfs daemon
 
 Make a note of the TCP ports you receive. If they are different, use yours in the commands below.
 
-Now, switch back to your original terminal. If you’re connected to the network, you should be able to see the ipfs addresses of your peers when you run:
+Now, switch back to your original terminal. If you’re connected to the network, you should be able to see the IPFS addresses of your peers when you run:
 
 ```bash
 ipfs swarm peers
@@ -140,7 +140,7 @@ By default, your gateway is not exposed to the world. It only works locally.
 
 ## Web console
 
-You can view the web console on your local node by going to [`localhost:5001/webui`](http://localhost:5001/webui). This should bring up a console like this:
+You can view the web console on your local node by going to `localhost:5001/webui`. This should bring up a console like this:
 
 ![Web console connection view](./images/command-line-quick-start/webui-connection.png)
 
@@ -148,7 +148,7 @@ You can view the web console on your local node by going to [`localhost:5001/web
 
 While we are at it, [IPFS Companion](https://github.com/ipfs-shipyard/ipfs-companion#ipfs-companion) is a browser extension that simplifies access to IPFS resources and adds support for the IPFS protocol.
 
-It will automatically redirect IPFS gateway requests to your local daemon so that you are not relying on or trusting, remote gateways.
+It will automatically redirect IPFS gateway requests to your local daemon so that you are not relying on or trusting remote gateways.
 
 It runs in Firefox (desktop and Android) and various Chromium-based browsers such as Google Chrome or [Brave](https://brave.com).
 [Check out its features](https://github.com/ipfs-shipyard/ipfs-companion#features) and install it today!
@@ -177,4 +177,4 @@ You need to install and set up FUSE in order to mount the file system. For more 
 
 ### Further help
 
-The IPFS community is friendly and able to help! Get support from other IPFS developers in the official [IPFS forums](https://discuss.ipfs.io/), or join the conversation on [IRC](/community/irc/).
+The IPFS community is friendly and able to help! Get support from other IPFS developers in the official [IPFS forums](https://discuss.ipfs.io/), or join the conversation on [Matrix](/community/chat/).

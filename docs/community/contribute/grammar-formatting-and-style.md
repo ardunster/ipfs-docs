@@ -40,13 +40,21 @@ When referring to projects by name, use proper noun capitalization: Go-IPFS and 
 
 Cases inside code blocks refer to commands and are not capitalized: `go-ifps` or `js-ifps`.
 
+### _Using_ IPFS, not _on_ IPFS
+
+IPFS is a protocol just like SSH, HTTP, or FTP. To that end, users do things _with_ IPFS, not _on_ IPFS.
+
+> The company uses IPFS to share data across office computers.
+>
+> Developers can use IPFS as a more efficient way of transferring files throughout a network.
+
 ## Formatting
 
 How the Markdown syntax looks, and code formatting rules to follow.
 
 ### Syntax
 
-The IPFS Docs project follows the _GitHub Flavoured Markdown_ syntax for markdown. This way, all articles display properly within GitHub itself. This gives readers the option to view articles on [the docs website](https://docs.ipfs.io) or [its GitHub repo](https://github.com/ipfs/ipfs-docs).
+The IPFS Docs project follows the _GitHub Flavored Markdown_ syntax for markdown. This way, all articles display properly within GitHub itself. This gives readers the option to view articles on [the docs website](https://docs.ipfs.io) or [its GitHub repo](https://github.com/ipfs/ipfs-docs).
 
 ### Rules
 

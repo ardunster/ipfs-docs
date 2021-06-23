@@ -1,6 +1,7 @@
 // .vuepress/config.js
 
 const DEPLOY_DOMAIN = 'https://docs.ipfs.io'
+const SPEEDCURVE_ID = process.env.SPEEDCURVE_ID || ''
 const pageSuffix = '/'
 
 module.exports = {
@@ -76,45 +77,8 @@ module.exports = {
               'install/ipfs-companion',
               'install/command-line',
               ['install/ipfs-updater', 'Updater'],
-              'install/server-infrastructure'
-            ]
-          },
-          {
-            title: 'Recent releases',
-            path: '/recent-releases/',
-            children: [
-              {
-                title: 'Go-IPFS 0.7',
-                sidebarDepth: 1,
-                children: [
-                  '/recent-releases/go-ipfs-0-7/',
-                  ['/recent-releases/go-ipfs-0-7/install', 'Install'],
-                  '/recent-releases/go-ipfs-0-7/update-procedure',
-                  '/recent-releases/go-ipfs-0-7/features'
-                ]
-              },
-              {
-                title: 'Go-IPFS 0.6',
-                sidebarDepth: 1,
-                children: [
-                  '/recent-releases/go-ipfs-0-6/',
-                  ['/recent-releases/go-ipfs-0-6/install', 'Install'],
-                  '/recent-releases/go-ipfs-0-6/update-procedure',
-                  '/recent-releases/go-ipfs-0-6/features'
-                ]
-              },
-              {
-                title: 'Go-IPFS 0.5',
-                sidebarDepth: 1,
-                children: [
-                  '/recent-releases/go-ipfs-0-5/',
-                  ['/recent-releases/go-ipfs-0-5/install', 'Install'],
-                  '/recent-releases/go-ipfs-0-5/update-procedure',
-                  '/recent-releases/go-ipfs-0-5/features',
-                  '/recent-releases/go-ipfs-0-5/fixes',
-                  '/recent-releases/go-ipfs-0-5/troubleshooting'
-                ]
-              }
+              'install/server-infrastructure',
+              'install/recent-releases'
             ]
           },
           {
@@ -205,6 +169,7 @@ module.exports = {
                   '/how-to/modify-bootstrap-list',
                   '/how-to/nat-configuration',
                   '/how-to/default-profile',
+                  '/how-to/run-ipfs-inside-docker',
                   [
                     'https://github.com/ipfs/js-ipfs/tree/master/examples/custom-ipfs-repo',
                     'Customize an IPFS repo'
@@ -232,7 +197,8 @@ module.exports = {
                 collapsable: false,
                 children: [
                   '/how-to/observe-peers',
-                  '/how-to/exchange-files-between-nodes'
+                  '/how-to/exchange-files-between-nodes',
+                  '/how-to/peering-with-content-providers'
                 ]
               },
               {
@@ -253,6 +219,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                   'how-to/address-ipfs-on-web',
+                  'how-to/create-simple-chat-app',
                   '/how-to/browser-tools-frameworks'
                 ]
               },
@@ -265,6 +232,15 @@ module.exports = {
                   'how-to/dnslink-companion',
                   'how-to/companion-window-ipfs',
                   '/how-to/companion-x-ipfs-path-header'
+                ]
+              },
+              {
+                title: 'IPFS & Blockchain Networks',
+                sidebarDepth: 1,
+                collapsable: false,
+                children: [
+                  'how-to/mint-nfts-with-ipfs',
+                  'how-to/best-practices-for-nft-data'
                 ]
               }
             ]
@@ -295,12 +271,15 @@ module.exports = {
                   ],
                   '/community/contribute/ways-to-contribute',
                   ['https://discuss.ipfs.io/', 'IPFS forums'],
-                  '/community/irc',
+                  '/community/chat',
                   ['https://proto.school/events', 'ProtoSchool workshops'],
                   ['https://www.meetup.com/members/249142444/', 'Meetups'],
                   '/community/social-media',
                   ['https://awesome.ipfs.io', 'Awesome IPFS'],
-                  ['https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew', 'YouTube']
+                  [
+                    'https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew',
+                    'YouTube'
+                  ]
                 ]
               },
               {
@@ -339,6 +318,7 @@ module.exports = {
     }
   },
   plugins: [
+    [require('./plugins/vuepress-plugin-speedcurve'), { id: SPEEDCURVE_ID }],
     '@vuepress/plugin-back-to-top',
     [
       '@vuepress/google-analytics',
@@ -351,7 +331,7 @@ module.exports = {
       {
         normalSuffix: pageSuffix,
         indexSuffix: pageSuffix,
-        notFoundPath: '/404/'
+        notFoundPath: '/ipfs-404.html'
       }
     ],
     [
@@ -400,7 +380,8 @@ module.exports = {
     [
       'vuepress-plugin-sitemap',
       {
-        hostname: DEPLOY_DOMAIN
+        hostname: DEPLOY_DOMAIN,
+        exclude: ['/ipfs-404.html']
       }
     ],
     [
@@ -436,6 +417,7 @@ module.exports = {
         defaultTitle: ''
       }
     ],
+    'vuepress-plugin-chunkload-redirect',
     'vuepress-plugin-ipfs'
   ],
   extraWatchFiles: ['.vuepress/nav/en.js']

@@ -26,14 +26,6 @@ Protect yourself from single-point-of-failure risks and benefit from decentraliz
 
 [Start the tutorial →](/how-to/websites-on-ipfs/single-page-website/)
 
-## See what others are building
-
-Are you looking for inspiration? You can find a huge collection of awesome community projects over at Awesome IPFS.
-
-[Check out Awesome IPFS now →](https://awesome.ipfs.io/)
-
-![The Awesome IPFS homepage.](./images/awesome-ipfs.png =740x420)
-
 ## Learn about the decentralized web
 
 Want to know more about the decentralized web (Dweb) and how it's changing the internet? These resources will give you a clearer understanding of the Dweb movement, and how it's improving the world:
@@ -44,8 +36,20 @@ Want to know more about the decentralized web (Dweb) and how it's changing the i
 
 [See more guides in the Concepts section →](/concepts/)
 
+::: callout
+ProtoSchool's self-guided [interactive tutorials](https://proto.school/tutorials) are designed to introduce you to decentralized web concepts, protocols, and tools. Explore js-ipfs APIs by completing browser-based coding challenges in ProtoSchool's [IPFS course](https://proto.school/course/ipfs), or explore code-free intros to essential dweb concepts and related projects in the IPFS ecosystem.
+:::
+
+## See what others are building
+
+Are you looking for inspiration? You can find a huge collection of awesome community projects over at Awesome IPFS.
+
+[Check out Awesome IPFS now →](https://awesome.ipfs.io/)
+
+![The Awesome IPFS homepage.](./images/awesome-ipfs.png =740x420)
+
 ## Be part of the IPFS community
 
-IPFS has a bustling community of designers, developers, writers, and activists who are all helping to improve the project. You can join in by attending a local meetup, helping out at a conference, chatting online through the `#ipfs` [IRC channel](/community/irc), or joining a discussion in [the IPFS forum](https://discuss.ipfs.io/).
+IPFS has a bustling community of designers, developers, writers, and activists who are all helping to improve the project. You can join in by attending a local meetup, helping out at a conference, chatting online through [Matrix channels](/community/chat), or joining a discussion in [the IPFS forum](https://discuss.ipfs.io/).
 
 [Find out more in the Community section →](/community/)

@@ -6,7 +6,17 @@ description: Hands-on guides to using and developing with IPFS to build decentra
 
 # Address IPFS on the Web
 
-This document is a guide to how to address IPFS content paths on the web.
+_How to link to content on IPFS._
+
+```
+https://ipfs.io/ipfs/<CID>
+# e.g
+https://ipfs.io/ipfs/Qme7ss3ARVgxv6rXqVPiikMJ8u2NLgmgszg13pYrDKEoiu
+```
+
+Browsers that support IPFS can redirect these requests to your local IPFS node, while those that don't can fetch the resource from the ipfs.io gateway. 
+
+You can swap out `ipfs.io` for your own http-to-ipfs gateway, but you are then obliged to keep that gateway running _forever_. If your gateway goes down, users with IPFS aware tools will still be able to fetch the content from the IPFS network as long as any node still hosts it, but for those without, the link will be broken. Don't do that.
 
 ## Dweb addressing in brief
 
@@ -20,7 +30,7 @@ This document is a guide to how to address IPFS content paths on the web.
 
 ## HTTP gateways
 
-Gateways are provided strictly for convenience: in other words, they help tools that speak HTTP but do not speak distributed protocols such as IPFS. They are the first stage of the upgrade path for the web.
+Gateways are provided strictly for convenience: in other words, they help tools that speak HTTP but do not speak distributed protocols (such as IPFS) to communicate. They are the first stage of the upgrade path for the web. [More information about IPFS Gateways](/concepts/ipfs-gateway/).
 
 ### Centralization
 
@@ -190,7 +200,7 @@ The best and most up-to-date source of truth about IPFS addressing can be found 
 
 ### Background on address scheme discussions
 
-Discussions around IPFS addressing have been going on since @jbenet published the [IPFS whitepaper](https://ipfs.io/ipfs/QmR7GSQM93Cx5eAg6a6yRzNde1FQv7uL6X1o4k7zrJa3LX/ipfs.draft3.pdf), with a number of other approaches being proposed. This long-standing design discussion includes many lengthy GitHub issue threads, but a good summary can be found in [this PR&nbsp;<i class="fas fa-external-link-square-alt fa-sm"></i></a>](https://github.com/ipfs/specs/pull/152).
+Discussions around IPFS addressing have been going on since [@jbenet](https://github.com/jbenet) published the [IPFS whitepaper](https://ipfs.io/ipfs/QmR7GSQM93Cx5eAg6a6yRzNde1FQv7uL6X1o4k7zrJa3LX/ipfs.draft3.pdf), with a number of other approaches being proposed. This long-standing design discussion includes many lengthy GitHub issue threads, but a good summary can be found in [this PR&nbsp;<i class="fas fa-external-link-square-alt fa-sm"></i></a>](https://github.com/ipfs/specs/pull/152).
 
 ### IPFS Companion
 

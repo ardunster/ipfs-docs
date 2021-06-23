@@ -353,9 +353,6 @@ different on-disk structure, you will need to run the [ipfs-ds-convert
 tool](https://github.com/ipfs/ipfs-ds-convert) to migrate data into the new
 structures.
 
-For more information on possible values for this configuration option, see
-[docs/datastores.md](datastores.md)
-
 Default:
 
 ```
@@ -591,7 +588,7 @@ It is also possible to remove a default by setting it to `null`.
 For example, to disable subdomain gateway on `localhost`
 and make that hostname act the same as `127.0.0.1`:
 
-```console
+```shell
 $ ipfs config --json Gateway.PublicGateways '{"localhost": null }'
 ```
 
@@ -601,7 +598,7 @@ Below is a list of the most common public gateway setups.
 
 - Public [subdomain gateway](https://docs.ipfs.io/how-to/address-ipfs-on-web/#subdomain-gateway) at `http://{cid}.ipfs.dweb.link` (each content root gets its own Origin)
 
-  ```console
+  ```shell
   $ ipfs config --json Gateway.PublicGateways '{
       "dweb.link": {
         "UseSubdomains": true,
@@ -620,7 +617,7 @@ Below is a list of the most common public gateway setups.
 
 - Public [path gateway](https://docs.ipfs.io/how-to/address-ipfs-on-web/#path-gateway) at `http://ipfs.io/ipfs/{cid}` (no Origin separation)
 
-  ```console
+  ```shell
   $ ipfs config --json Gateway.PublicGateways '{
       "ipfs.io": {
         "UseSubdomains": false,
@@ -631,7 +628,7 @@ Below is a list of the most common public gateway setups.
 
 - Public [DNSLink](https://dnslink.io/) gateway resolving every hostname passed in `Host` header.
 
-  ```console
+  ```shell
   $ ipfs config --json Gateway.NoDNSLink true
   ```
 
@@ -644,7 +641,7 @@ Below is a list of the most common public gateway setups.
   is already present on the node), without exposing any content-addressing `Paths`:
   "NoFetch": true,
   "NoDNSLink": true,
-  ```console
+  ```shell
   $ ipfs config --json Gateway.NoFetch true
   $ ipfs config --json Gateway.NoDNSLink true
   $ ipfs config --json Gateway.PublicGateways '{
@@ -1283,14 +1280,7 @@ Type: `priority`
 Mplex is the default multiplexer used when communicating between go-ipfs and all
 other IPFS and libp2p implementations. Unlike Yamux:
 
-- Mplex is a simpler protocol.
-- Mplex is more efficient.
-- Mplex does not have built-in keepalives.
-- Mplex does not support backpressure. Unfortunately, this means that, if a
-  single stream to a peer gets backed up for a period of time, the mplex
-  transport will kill the stream to allow the others to proceed. On the other
-  hand, the lack of backpressure means mplex can be significantly faster on some
-  high-latency connections.
+The mounts config values specifies the default mount points for the IPFS and IPNS virtual file systems, if no other directories are specified by the `ipfs mount` command. These folders should exist, and have permissions for your user to be able to mount to them via fuse.
 
 Default: `200`
 

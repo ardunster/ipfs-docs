@@ -7,7 +7,7 @@ description: Developer resources for working in JavaScript with IPFS, the InterP
 # JS-IPFS
 
 ::: callout
-[Explore js-ipfs through interactive coding challenges at ProtoSchool](https://proto.school/tutorials?course=ipfs)
+[Explore js-ipfs through interactive coding challenges at ProtoSchool](https://proto.school/course/ipfs)
 :::
 
 ## IPFS and JavaScript
@@ -26,7 +26,7 @@ Whenever reasonable, we recommend the second method (interacting with a separate
 
 Both the `js-ipfs` and `js-ipfs-http-client` libraries work in browsers, but each has some special considerations noted in their READMEs.
 
-You may also be interested in the IPFS browser extension, [IPFS Companion](https://github.com/ipfs-shipyard/ipfs-companion). If a visitor to your site has it installed, it will make a global [`window.ipfs`](https://github.com/ipfs-shipyard/ipfs-companion/blob/master/docs/window.ipfs.md) object available to your JavaScript. This object has the same interface as `js-ipfs-api`, but comes with much better security controls and lets you use IPFS without loading any special libraries.
+Until late 2019, the IPFS browser extension, [IPFS Companion](https://github.com/ipfs-shipyard/ipfs-companion) exposed a global [`window.ipfs`](https://github.com/ipfs-shipyard/ipfs-companion/blob/master/docs/window.ipfs.md) object to web pages. This object had the same interface as `js-ipfs-api`, but came with much better security controls and let you use IPFS without loading any special libraries.  However, it was disabled due to reasons explained in [ipfs/ipfs-companion#777](https://github.com/ipfs/ipfs-companion/pull/777).
 
 ## JS API reference
 
@@ -38,6 +38,6 @@ A [client library](https://github.com/ipfs/js-ipfs/tree/master/packages/ipfs-htt
 
 ## Hands-on examples
 
-There are lots of JS-IPFS use-case examples in the [`ipfs/js-ipfs` GitHub repository](https://github.com/ipfs/js-ipfs). They're all self-contained projects that let your spin up and test environments quickly. [Check them out →](https://github.com/ipfs/js-ipfs/tree/master/examples).
+There are lots of JS-IPFS use-case examples in the [`ipfs/js-ipfs` GitHub repository](https://github.com/ipfs/js-ipfs). They're all self-contained projects that let your spin up and test environments quickly. [Check them out →](https://github.com/ipfs/js-ipfs/tree/master/examples)
 
 A good starting place is the [IPFS 101, spawn a node and add a file to the IPFS network](https://github.com/ipfs/js-ipfs/tree/master/examples/ipfs-101).
