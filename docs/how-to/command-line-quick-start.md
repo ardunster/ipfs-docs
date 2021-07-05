@@ -14,11 +14,15 @@ Don’t want to use the command line right now? Give the desktop-app implementat
 
 ## Prerequisites
 
-If you have not yet installed Go-IPFS, follow the [install instructions](../../install/command-line).
+If you have not yet installed Go-IPFS, follow the [install instructions](../install/command-line.md).
 
 ## Initialize the repository
 
 `ipfs` stores all its settings and internal data in a directory called _the repository._ Before using IPFS for the first time, you’ll need to initialize the repository with the `ipfs init` command:
+
+::: warning
+Be careful with `sudo` on Unix platforms (including macOS)! If you run `sudo ipfs init`, the repository will be created for the `root` user instead of your local user account. IPFS doesn't need root privileges, so it's best to run all `ipfs` commands as a regular user!
+:::
 
 ```bash
 ipfs init
@@ -177,4 +181,4 @@ You need to install and set up FUSE in order to mount the file system. For more 
 
 ### Further help
 
-The IPFS community is friendly and able to help! Get support from other IPFS developers in the official [IPFS forums](https://discuss.ipfs.io/), or join the conversation on [Matrix](/community/chat/).
+The IPFS community is friendly and able to help! Get support from other IPFS developers in the official [IPFS forums](https://discuss.ipfs.io/), or join the conversation on [Matrix](../community/chat.md).

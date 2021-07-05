@@ -12,6 +12,8 @@ Since an NFT can't be easily changed after it's been created, it's a good idea t
 
 This guide is aimed at developers building NFT platforms and other tools, and it's focused on how to format your data and link to it for the best long-term results. If you're looking for details about smart contract interactions and how token minting works, head over to our [guide to minting NFTs with IPFS][docs-mint-nfts], where we go over the whole process from end-to-end using an Ethereum test network.
 
+If you're interested in a deeper dive in the world of NFT best practices and NFT development in general, head over to [NFT School](https://nftschool.dev) for concept guides, tutorials, and how-tos.
+
 ## Types of IPFS links and when to use them
 
 There are a few different ways to refer to data on IPFS, each of which is best suited to different use cases.
@@ -42,7 +44,7 @@ const cid = await ipfs.add({ content }, {
 })
 ```
 
-If you already have a version 0 CID for your content, there's no need to add it to IPFS again just to get the new CID format! You can convert a v0 CID to v1 using [the ipfs command line](/how-to/address-ipfs-on-web/#manual-use-cid-ipfs-io-or-the-command-line) or on the web at [cid.ipfs.io](https://cid.ipfs.io). If you're not sure which version you have, it's easy to tell the difference. Version 0 CIDs are always 46 characters long, starting with `Qm`.
+If you already have a version 0 CID for your content, there's no need to add it to IPFS again just to get the new CID format! You can convert a v0 CID to v1 using [the ipfs command line](address-ipfs-on-web.md#manual-use-cid-ipfs-io-or-the-command-line) or on the web at [cid.ipfs.io](https://cid.ipfs.io). If you're not sure which version you have, it's easy to tell the difference. Version 0 CIDs are always 46 characters long, starting with `Qm`.
 
 ::: tip
 You can learn more about CIDs in our [guide to Content Addressing][docs-cid], or by following the [interactive tutorials on ProtoSchool][protoschool-cid].
